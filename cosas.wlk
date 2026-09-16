@@ -82,8 +82,12 @@ object bateriaAntiaerea {
 object contenedorPortuario {
     const cargaDelContenedor = []
 
+    method cargarContenedorConVariasCargas (listaDeObjetosACargar){
+        cargaDelContenedor.addAll(listaDeObjetosACargar)
+    }
+    
     method pesoDeLaCargaDelContenedor(){
-
+        
     }
 
     method peso(){
