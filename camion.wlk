@@ -28,5 +28,23 @@ object camion {
         return cosas.any(cosa => cosa.peso() == unPeso)
     }
 
-    method
+    method nivelDePeligroMayorOIgualA(unNivel){
+        return carga.filter({cosa => cosa.peligrosidad() >= unNivel})
+    }
+
+    method cosasMasPeligrosasQue(unNivel){
+        return carga.filter({cosa => cosa.peligrosidad()> unNivel})
+    }
+
+    method estaExcedido(){
+        return peso() >= 2500 
+    }
+
+    method puedeCircularEnRuta(unNivel){
+        return estaExcedido() and cosasMasPeligrosasQue(unNivel)
+    }
+
+    method pesoEntre(unValor, otroValor){
+        return carga.any({carga => carga.peso().between(unValor, otroValor)})
+    }
 }
