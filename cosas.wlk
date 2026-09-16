@@ -87,11 +87,11 @@ object contenedorPortuario {
     }
     
     method pesoDeLaCargaDelContenedor(){
-        
+       return cargaDelContenedor.sum({cosa => cosa.peso()})
     }
 
     method peso(){
-        return 
+        return 100 + self.pesoDeLaCargaDelContenedor()
     }
 
     method peligrosidad(){
