@@ -95,7 +95,7 @@ object contenedorPortuario {
     }
 
     method peligrosidad(){
-        return
+        return if(cargaDelContenedor.isEmpty()) 0 else cargaDelContenedor.max({cosa => cosa.peligrosidad()}).peligrosidad()
     }
 }
 
