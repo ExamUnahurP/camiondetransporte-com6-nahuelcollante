@@ -1,4 +1,5 @@
 import cosas.*
+import camion.*
 
 test "El peso de los ladrillos es 4"{
   paqueteDeLadrillos.agregarLadrillos(2)
