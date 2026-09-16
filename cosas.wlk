@@ -48,20 +48,32 @@ object bateriaAntiaerea {
 object contenedorPortuario {
     const cargaDelContenedor = []
 
-    method
+    method pesoDeLaCargaDelContenedor(){
+
+    }
+
     method peso(){
         return 
     }
 }
 
 object residuosRadioactivos {
+    var peso = 30
+
+    method cambiarPeso(NuevoPeso){
+        peso = nuevoPeso
+    }
     method peso(){
         return 
     }
 }
 
 object embalajeDeSeguridad {
+    var cosaEnvuelta = 
+    method embalarCosa(cosa){
+        cosaEnvuelta = cosa
+    }
     method peso(){
-        return 
+        return cosa.peso()
     }
 }
