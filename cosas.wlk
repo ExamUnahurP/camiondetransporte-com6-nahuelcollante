@@ -29,10 +29,10 @@ object bumblebee {
 }
 
 object paqueteDeLadrillos {
-    var cantidadDeLadrillos = 10
+    var cantidadDeLadrillos = 0
 
-    method cambiarCantidadDeLadrillos(nuevaCantidad){
-        cantidadDeLadrillos = nuevaCantidad
+    method agregarLadrillos(unaCantidad){
+        cantidadDeLadrillos = cantidadDeLadrillos + unaCantidad
     }
     method peso(){
         return cantidadDeLadrillos * 2

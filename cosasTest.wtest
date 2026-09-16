@@ -1,9 +1,6 @@
 import cosas.*
 
-describe "group of test for cosas" {
-
-  test "first test" {
-    assert.that(true)
-  }
-
+test "El peso de los ladrillos es 4"{
+  paqueteDeLadrillos.agregarLadrillos(2)
+  assert.equals(4, paqueteDeLadrillos.peso())
 }

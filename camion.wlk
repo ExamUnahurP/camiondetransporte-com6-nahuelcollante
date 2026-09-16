@@ -1,5 +1,7 @@
+import cosas.*
+
 object camion {
-    const cargaCamion = []
+    const carga = []
 
     method tara(){
         return 1000
@@ -46,5 +48,9 @@ object camion {
 
     method pesoEntre(unValor, otroValor){
         return carga.any({carga => carga.peso().between(unValor, otroValor)})
+    }
+
+    method cosaMasPesada(){
+        return carga.max({cosa => cosa.peso()})
     }
 }
