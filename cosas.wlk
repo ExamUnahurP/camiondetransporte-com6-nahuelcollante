@@ -2,11 +2,29 @@ object knightRider {
     method peso(){
         return 500
     }
+
+    method peligrosidad(){
+        return 10
+    }
 }
 
 object bumblebee {
+    var estaTransformado = false
+
     method peso(){
         return 800
+    }
+    
+    method transformar(){
+        estaTransformado = true 
+    }
+
+    method destranformar(){
+        estaTransformado = false
+    }
+
+    method peligrosidad(){
+        return 
     }
 }
 
@@ -18,6 +36,10 @@ object paqueteDeLadrillos {
     }
     method peso(){
         return cantidadDeLadrillos * 2
+    }
+
+    method peligrosidad(){
+        return
     }
 }
 
@@ -31,6 +53,10 @@ object arenaAGranel {
     method peso(){
         return peso
     }
+
+    method peligrosidad(){
+        return
+    }
 }
 
 object bateriaAntiaerea {
@@ -42,6 +68,10 @@ object bateriaAntiaerea {
 
     method cambiarEstaConLosMisiles(){
         if (estaConLosMisiles = false) estaConLosMisiles = true else estaConLosMisiles false
+    }
+
+    method peligrosidad(){
+        return
     }
 }
 
@@ -55,6 +85,10 @@ object contenedorPortuario {
     method peso(){
         return 
     }
+
+    method peligrosidad(){
+        return
+    }
 }
 
 object residuosRadioactivos {
@@ -66,14 +100,23 @@ object residuosRadioactivos {
     method peso(){
         return 
     }
+
+    method peligrosidad(){
+        return
+    }
 }
 
 object embalajeDeSeguridad {
-    var cosaEnvuelta = 
+    var cosaEnvuelta = knightRider
+
     method embalarCosa(cosa){
         cosaEnvuelta = cosa
     }
     method peso(){
         return cosa.peso()
+    }
+
+    method peligrosidad(){
+        return
     }
 }
