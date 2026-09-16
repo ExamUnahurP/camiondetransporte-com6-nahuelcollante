@@ -24,7 +24,7 @@ object bumblebee {
     }
 
     method peligrosidad(){
-        return 
+        return if(estaTransformado = false) 15 else 30
     }
 }
 
@@ -39,7 +39,7 @@ object paqueteDeLadrillos {
     }
 
     method peligrosidad(){
-        return
+        return 2
     }
 }
 
@@ -55,7 +55,7 @@ object arenaAGranel {
     }
 
     method peligrosidad(){
-        return
+        return 1
     }
 }
 
@@ -66,12 +66,16 @@ object bateriaAntiaerea {
         return if (estaConLosMisiles = false) 200 else 300 
     }
 
-    method cambiarEstaConLosMisiles(){
-        if (estaConLosMisiles = false) estaConLosMisiles = true else estaConLosMisiles false
+    method armarConLosMisiles(){
+        estaConLosMisiles = true
+    }
+    
+    method desarmarMisiles(){
+        estaConLosMisiles = false
     }
 
     method peligrosidad(){
-        return
+        return if(estaConLosMisiles = false) 0 else 100
     }
 }
 
@@ -98,11 +102,11 @@ object residuosRadioactivos {
         peso = nuevoPeso
     }
     method peso(){
-        return 
+        return peso
     }
 
     method peligrosidad(){
-        return
+        return 200
     }
 }
 
@@ -113,10 +117,10 @@ object embalajeDeSeguridad {
         cosaEnvuelta = cosa
     }
     method peso(){
-        return cosa.peso()
+        return cosaEnvuelta.peso()
     }
 
     method peligrosidad(){
-        return
+        return cosaEnvuelta.peligrosidad() / 2
     }
 }
