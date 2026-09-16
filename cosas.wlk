@@ -1,31 +1,66 @@
 object knightRider {
-
+    method peso(){
+        return 500
+    }
 }
 
-object name {
-
+object bumblebee {
+    method peso(){
+        return 800
+    }
 }
 
-object name {
+object paqueteDeLadrillos {
+    var cantidadDeLadrillos = 10
 
+    method cambiarCantidadDeLadrillos(nuevaCantidad){
+        cantidadDeLadrillos = nuevaCantidad
+    }
+    method peso(){
+        return cantidadDeLadrillos * 2
+    }
 }
 
-object name {
+object arenaAGranel {
+    var peso = 20
+    
+    method cambiarPesoDeArena(nuevoPeso){
+        peso = nuevoPeso
+    }
 
+    method peso(){
+        return peso
+    }
 }
 
-object name {
+object bateriaAntiaerea {
+    var estaConLosMisiles = false
 
+    method peso(){
+        return 
+    }
+
+    method cambiar
+
+    method estaConLosMisiles(){
+        return estaConLosMisiles
+    }
 }
 
-object name {
-
+object contenedorPortuario {
+    method peso(){
+        return 
+    }
 }
 
-object name {
-
+object residuosRadioactivos {
+    method peso(){
+        return 
+    }
 }
 
-object name {
-
+object embalajeDeSeguridad {
+    method peso(){
+        return 
+    }
 }
