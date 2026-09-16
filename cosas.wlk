@@ -37,17 +37,18 @@ object bateriaAntiaerea {
     var estaConLosMisiles = false
 
     method peso(){
-        return 
+        return if (estaConLosMisiles = false) 200 else 300 
     }
 
-    method cambiar
-
-    method estaConLosMisiles(){
-        return estaConLosMisiles
+    method cambiarEstaConLosMisiles(){
+        if (estaConLosMisiles = false) estaConLosMisiles = true else estaConLosMisiles false
     }
 }
 
 object contenedorPortuario {
+    const cargaDelContenedor = []
+
+    method
     method peso(){
         return 
     }
